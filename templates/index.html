@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battery Swapping Station</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="26" height="26">
+        <path d="M7 2h10v3h2a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h2V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M13 8l-4 6h3l-1 4 4-6h-3l1-4z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="brand-text">
+      <h1 id="stationName">Battery Swapping Station</h1>
+      <span class="brand-sub"><span id="boardCount">0</span> boards &middot; <span id="compartmentCount">0</span> compartments &middot; Firmware <span id="firmwareVer">--</span></span>
+    </div>
+  </div>
+
+  <div class="conn" id="connIndicator">
+    <span class="conn-dot" id="connDot"></span>
+    <span id="connLabel">CONNECTING</span>
+  </div>
+</header>
+
+<main class="grid" id="cardGrid">
+  <p class="empty-state" id="emptyState">Waiting for boards to report in over CAN&hellip;</p>
+</main>
+
+<footer class="footer">
+  <span id="footerCompany">Your Company Name</span>
+  <span class="footer-dot">&middot;</span>
+  <span>Battery Swap Control Panel</span>
+  <span class="footer-dot">&middot;</span>
+  <span>Updated <span id="lastUpdated">--</span></span>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
